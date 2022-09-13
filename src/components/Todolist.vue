@@ -8,10 +8,7 @@ const todoList = reactive({
   todos: [],
 });
 
-axios.defaults.headers.common["Authorization"] =
-  "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxMDQwIiwic2NwIjoidXNlciIsImF1ZCI6bnVsbCwiaWF0IjoxNjYyNzAxMTIzLCJleHAiOjE2NjM5OTcxMjMsImp0aSI6IjAwN2U5Yjg0LTdlOWQtNDczZC04MjRjLTI5YjM4MWRmNDBlMyJ9.q2HsgOO72zTcr5zqBAq07Lb5iGYAgzG6nzPiVqVGjvE";
-
-async function fetchTodo() {
+axios.defaults.headers.common["Authorization"] = ""
   try {
     const data = (await axios.get("https://todoo.5xcamp.us/todos")).data.todos;
     console.log(data);
